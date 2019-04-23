@@ -16,8 +16,12 @@ public class SedeController {
     SedeRepository repSede;
 
     @RequestMapping("sedes.html")
-    public String home() {
-        return "sedes";
+    public ModelAndView home() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("sedes");
+        List<Sede> sedes = repSede.findAll();
+        mv.addObject("sedes", sedes);
+        return mv;
     }
 
     @RequestMapping("cadastro-sedes.html")
