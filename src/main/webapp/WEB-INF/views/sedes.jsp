@@ -23,10 +23,25 @@
             <th>Excluir</th>
         </thead>
         <tbody>
-            
+            <c:forEach var="sede" items="${sedes}">
+                <tr>
+                    <td>${sede.nome}</td>
+                    <td>${sede.estado}</td>
+                    <td>${sede.cidade}</td>
+                    <td>${sede.bairro}</td>
+                    <td>${sede.telefone}</td>
+                    <td>${sede.enderecoWeb}</td>
+                    <td>
+                        <a href="">Editar</a>
+                    </td>
+                    <td>
+                        <a href="">Excluir</a>
+                    </td>
+                </tr>
+            </c:forEach>
         </tbody>
     </table>
-    <p>Olá ${nome}, de ${cidade} - ${estado}</p>
+    <!--<p>Olá ${sede.nome}, de ${sede.cidade} - ${sede.estado}</p>-->
     <div>
         <a href="cadastro-sedes.html">Cadastrar nova sede</a>
     </div>

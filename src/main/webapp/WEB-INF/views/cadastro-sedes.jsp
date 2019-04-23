@@ -13,7 +13,7 @@
     <label>Telefone</label>
     <input required type="text" name="telefone" placeholder="Informe o telefone"><br/>
     <label>Endereço Web</label>
-    <input required type="text" name="endWeb" placeholder="Informe o endereço web"><br/>
+    <input required type="text" name="enderecoWeb" placeholder="Informe o endereço web"><br/>
     <button type="submit">Cadastrar</button>
     <button type="reset">Apagar</button>
 </form>
