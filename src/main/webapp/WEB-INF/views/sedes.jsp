@@ -54,4 +54,7 @@
     <div>
         <a href="cadastro-sedes.html">Cadastrar nova sede</a>
     </div>
+    <div>
+        <a href="index.html">Página Inicial</a>
+    </div>
 </body>

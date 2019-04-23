@@ -25,10 +25,13 @@
             <th>Excluir</th>
         </thead>
         <tbody>
-            
+
         </tbody>
     </table>
     <div>
         <a href="cadastro-atividades.html">Cadastrar membro</a>
+    </div>
+    <div>
+        <a href="index.html">Página Inicial</a>
     </div>
 </body>
