@@ -1,13 +1,20 @@
 package br.ufjf.dcc193.trb1.controllers;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.ufjf.dcc193.trb1.models.Sede;
+import br.ufjf.dcc193.trb1.repositories.SedeRepository;
 
 @Controller
 public class SedeController {
+    @Autowired
+    SedeRepository repSede;
+
     @RequestMapping("sedes.html")
     public String home() {
         return "sedes";
@@ -22,12 +29,7 @@ public class SedeController {
     public ModelAndView resultCadSedes(Sede s) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("sedes");
-        /*mv.addObject("nome", nome);
-        mv.addObject("estado", estado);
-        mv.addObject("cidade", cidade);
-        mv.addObject("bairro", bairro);
-        mv.addObject("telefone", telefone);
-        mv.addObject("endWeb", endWeb);*/
+        List<Sede> sedes = repSede.findAll();
         mv.addObject("sede", s);
         return mv;
     }
