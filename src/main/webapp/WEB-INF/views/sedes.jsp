@@ -26,6 +26,7 @@
             
         </tbody>
     </table>
+    <p>Olá ${nome}, de ${cidade} - ${estado}</p>
     <div>
         <a href="cadastro-sedes.html">Cadastrar nova sede</a>
     </div>
