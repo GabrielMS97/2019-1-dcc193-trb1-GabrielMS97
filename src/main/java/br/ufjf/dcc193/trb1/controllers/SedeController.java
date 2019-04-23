@@ -29,8 +29,9 @@ public class SedeController {
     public ModelAndView resultCadSedes(Sede s) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("sedes");
+        repSede.save(s);
         List<Sede> sedes = repSede.findAll();
-        mv.addObject("sede", s);
+        mv.addObject("sedes", sedes);
         return mv;
     }
 
