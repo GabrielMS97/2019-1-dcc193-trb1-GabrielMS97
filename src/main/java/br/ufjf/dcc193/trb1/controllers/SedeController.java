@@ -39,4 +39,14 @@ public class SedeController {
         return mv;
     }
 
+    @RequestMapping("excluir-sedes.html")
+    public ModelAndView excluirSedes(Sede s) {
+        //Sede sede = repSede.getOne(s.getId());
+        ModelAndView mv = new ModelAndView();
+        repSede.deleteById(s.getId());
+        mv.addObject("sedes", repSede.findAll());
+        mv.setViewName("sedes");
+        return mv;
+    }
 }
+

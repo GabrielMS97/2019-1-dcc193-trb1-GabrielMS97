@@ -35,10 +35,16 @@
                 <td>${sede.telefone}</td>
                 <td>${sede.enderecoWeb}</td>
                 <td>
-                    <a href="">Editar</a>
+                    <form method="POST" action="editar-sedes.html">
+                        <input type="hidden" name="id" value="${sede.id}">
+                        <button type="submit">Editar</button>
+                    </form>
                 </td>
                 <td>
-                    <a href="">Excluir</a>
+                    <form method="POST" action="excluir-sedes.html">
+                        <input type="hidden" name="id" value="${sede.id}">
+                        <button type="submit">Excluir</button>
+                    </form>
                 </td>
             </tr>
         </c:forEach>
