@@ -66,4 +66,25 @@ public class AtividadeController {
         return mv;
     }
 
+    @RequestMapping("horas.html")
+    public ModelAndView calcularHoras(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("horas");
+        List<Sede> sedes = repSede.findAll();
+        List<Atividade> atividades = repAtividade.findAll();
+        for (Sede sede : sedes) {
+            for (Atividade atividade : atividades) {
+                if(sede.getNome() == atividade.getSede().getNome()){
+                    sede.setTotalHorasA(sede.getTotalHorasA() + atividade.getHorasAssistencial());
+                    sede.setTotalHorasE(sede.getTotalHorasE() + atividade.getHorasExecutiva());
+                    sede.setTotalHorasJ(sede.getTotalHorasJ() + atividade.getHorasJuridica());
+                    sede.setTotalHorasF(sede.getTotalHorasF() + atividade.getHorasFinanceira());
+                }
+            }
+        }
+        mv.addObject("sedes", sedes);
+        mv.addObject("atividades", atividades);
+        return mv;
+    }
+
 }

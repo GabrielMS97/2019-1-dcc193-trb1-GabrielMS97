@@ -16,7 +16,11 @@ public class Sede{
     private String cidade;
     private String bairro;
     private String telefone;
-    private String enderecoWeb;
+	private String enderecoWeb;
+	private int totalHorasA;
+	private int totalHorasJ;
+	private int totalHorasE;
+	private int totalHorasF;
 
     public Sede(){
         
@@ -90,6 +94,38 @@ public class Sede{
 	@Override
 	public String toString(){
 		return this.id + " - " + this.nome + "  " + this.cidade;
+	}
+
+	public int getTotalHorasA() {
+		return this.totalHorasA;
+	}
+
+	public void setTotalHorasA(int totalHorasA) {
+		this.totalHorasA = totalHorasA;
+	}
+
+	public int getTotalHorasJ() {
+		return this.totalHorasJ;
+	}
+
+	public void setTotalHorasJ(int totalHorasJ) {
+		this.totalHorasJ = totalHorasJ;
+	}
+
+	public int getTotalHorasE() {
+		return this.totalHorasE;
+	}
+
+	public void setTotalHorasE(int totalHorasE) {
+		this.totalHorasE = totalHorasE;
+	}
+
+	public int getTotalHorasF() {
+		return this.totalHorasF;
+	}
+
+	public void setTotalHorasF(int totalHorasF) {
+		this.totalHorasF = totalHorasF;
 	}
 
 }

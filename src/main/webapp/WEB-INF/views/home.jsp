@@ -14,6 +14,7 @@
             <li><a href="sedes.html"> Lista de Sedes </a></li>
             <li><a href="membros.html"> Lista de Membros </a></li>
             <li><a href="atividades.html"> Lista de Atividades </a></li>
+            <li><a href="horas.html"> Horas de atividades por sedes </a></li>
         </ul>
     </body>
 </html>
