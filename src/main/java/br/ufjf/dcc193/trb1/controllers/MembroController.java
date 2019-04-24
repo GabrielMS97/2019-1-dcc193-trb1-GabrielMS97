@@ -51,4 +51,12 @@ public class MembroController {
         return mv;
     }
 
+    @RequestMapping("editar-membros.html")
+    public ModelAndView editarSedes(Membro m) {
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("membro", repMembro.getOne(m.getId()));
+        mv.setViewName("editar-membros");
+        return mv;
+    }
+
 }
