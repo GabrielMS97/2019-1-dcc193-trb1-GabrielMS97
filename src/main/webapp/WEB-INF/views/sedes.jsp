@@ -13,7 +13,7 @@
     <h1> Sedes </h1>
     <br />
 
-    <table border="3px">
+    <table border="3px" class="table table-striped">
 
         <tr>
             <th>Sede</th>
@@ -38,13 +38,13 @@
                 <td>
                     <form method="POST" action="editar-sedes.html">
                         <input type="hidden" name="id" value="${sede.id}">
-                        <button type="submit">Editar</button>
+                        <button class="badge badge-primary" type="submit">Editar</button>
                     </form>
                 </td>
                 <td>
                     <form method="POST" action="excluir-sedes.html">
                         <input type="hidden" name="id" value="${sede.id}">
-                        <button type="submit">Excluir</button>
+                        <button class="badge badge-danger" type="submit">Excluir</button>
                     </form>
                 </td>
             </tr>
@@ -53,7 +53,7 @@
     </table>
     <!--<p>Olá ${sede.nome}, de ${sede.cidade} - ${sede.estado}</p>-->
     <div>
-        <a href="cadastro-sedes.html">Cadastrar nova sede</a>
+        <a class="btn btn-info" href="cadastro-sedes.html">Cadastrar nova sede</a>
     </div>
 </body>
 <%@include file="jspf/rodape.jspf" %>

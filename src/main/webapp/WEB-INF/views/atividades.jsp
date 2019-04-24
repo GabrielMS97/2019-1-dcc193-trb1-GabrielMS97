@@ -13,7 +13,7 @@
     <h1> Atividades </h1>
     <br />
 
-    <table border="3px">
+    <table border="3px" class="table table-striped">
         <tr>
             <th>Título</th>
             <th>Descrição</th>
@@ -41,20 +41,20 @@
                 <td>
                     <form method="POST" action="editar-atividades.html">
                         <input type="hidden" name="id" value="${atividade.id}">
-                        <button type="submit">Editar</button>
+                        <button class="badge badge-primary" type="submit">Editar</button>
                     </form>
                 </td>
                 <td>
                     <form method="POST" action="excluir-atividades.html">
                         <input type="hidden" name="id" value="${atividade.id}">
-                        <button type="submit">Excluir</button>
+                        <button class="badge badge-danger" type="submit">Excluir</button>
                     </form>
                 </td>
             </tr>
         </c:forEach>
     </table>
     <div>
-        <a href="cadastro-atividades.html">Cadastrar atividade</a>
+        <a class="btn btn-info" href="cadastro-atividades.html">Cadastrar atividade</a>
     </div>
 </body>
 <%@include file="jspf/rodape.jspf" %>

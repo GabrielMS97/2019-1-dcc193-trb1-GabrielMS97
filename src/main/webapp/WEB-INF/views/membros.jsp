@@ -13,7 +13,7 @@
     <h1> Membros </h1>
     <br />
 
-    <table border="3px">
+    <table border="3px" class="table table-striped">
         <tr>
             <th>Nome</th>
             <th>Função</th>
@@ -35,20 +35,20 @@
                 <td>
                     <form method="POST" action="editar-membros.html">
                         <input type="hidden" name="id" value="${membro.id}">
-                        <button type="submit">Editar</button>
+                        <button class="badge badge-primary" type="submit">Editar</button>
                     </form>
                 </td>
                 <td>
                     <form method="POST" action="excluir-membros.html">
                         <input type="hidden" name="id" value="${membro.id}">
-                        <button type="submit">Excluir</button>
+                        <button class="badge badge-danger" type="submit">Excluir</button>
                     </form>
                 </td>
             </tr>
         </c:forEach>
     </table>
     <div>
-        <a href="cadastro-membros.html">Cadastrar membro</a>
+        <a class="btn btn-info" href="cadastro-membros.html">Cadastrar membro</a>
     </div>
 </body>
 <%@include file="jspf/rodape.jspf" %>
