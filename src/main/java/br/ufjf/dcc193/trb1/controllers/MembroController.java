@@ -42,4 +42,13 @@ public class MembroController {
         return mv;
     }
 
+    @RequestMapping("excluir-membros.html")
+    public ModelAndView excluirSedes(Membro m) {
+        ModelAndView mv = new ModelAndView();
+        repMembro.deleteById(m.getId());
+        mv.addObject("membros", repMembro.findAll());
+        mv.setViewName("membros");
+        return mv;
+    }
+
 }
