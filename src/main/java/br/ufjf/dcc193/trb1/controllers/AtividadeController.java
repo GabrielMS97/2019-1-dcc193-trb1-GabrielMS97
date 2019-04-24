@@ -42,4 +42,13 @@ public class AtividadeController {
         return mv;
     }
 
+    @RequestMapping("excluir-atividades.html")
+    public ModelAndView excluirAtividades(Atividade a) {
+        ModelAndView mv = new ModelAndView();
+        repAtividade.deleteById(a.getId());
+        mv.addObject("atividades", repAtividade.findAll());
+        mv.setViewName("atividades");
+        return mv;
+    }
+
 }
