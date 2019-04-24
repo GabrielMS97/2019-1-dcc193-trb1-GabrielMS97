@@ -4,8 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import br.ufjf.dcc193.trb1.models.Atividade;
 import br.ufjf.dcc193.trb1.models.Membro;
 import br.ufjf.dcc193.trb1.models.Sede;
+import br.ufjf.dcc193.trb1.repositories.AtividadeRepository;
 import br.ufjf.dcc193.trb1.repositories.MembroRepository;
 import br.ufjf.dcc193.trb1.repositories.SedeRepository;
 
@@ -22,6 +24,10 @@ public class MainApplication {
 		MembroRepository repMembros = ctx.getBean(MembroRepository.class);
 		repMembros.save(new Membro("José", "Contador", "jose@jose", "20-04-2017", null));
 		repMembros.save(new Membro("Zeca", "Diretor", "zeca@zeca", "09-06-2015", "09-02-2019"));
+
+		AtividadeRepository repAtividades = ctx.getBean(AtividadeRepository.class);
+		repAtividades.save(new Atividade("Atividade 1", "DescriçãoDescriçãoDescrição", "21-12-2019", "23-04-2020", 4,4,4,4));
+		repAtividades.save(new Atividade("Atividade 2", "DescriçãoDescriçãoDescrição", "01-02-2003", "04-05-2006", 7,8,9,10));
 	}
 
 }
