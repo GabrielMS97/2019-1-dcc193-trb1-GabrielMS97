@@ -1,3 +1,4 @@
+<%@include file="jspf/cabecalho.jspf" %>
 <%@page pageEncoding="UTF-8" %>
 
 <h1>Cadastro de Sede</h1>

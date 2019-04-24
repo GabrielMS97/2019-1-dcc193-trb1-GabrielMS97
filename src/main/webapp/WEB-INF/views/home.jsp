@@ -1,3 +1,5 @@
+    
+<%@include file="jspf/cabecalho.jspf" %>
 <%@page pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,3 +17,4 @@
         </ul>
     </body>
 </html>
+<%@include file="jspf/rodape.jspf" %>

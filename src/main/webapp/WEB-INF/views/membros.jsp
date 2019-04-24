@@ -1,3 +1,4 @@
+<%@include file="jspf/cabecalho.jspf" %>
 <%@page pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -48,8 +49,5 @@
     </table>
     <div>
         <a href="cadastro-membros.html">Cadastrar membro</a>
-    </div>
-    <div>
-        <a href="index.html">Página Inicial</a>
     </div>
 </body>

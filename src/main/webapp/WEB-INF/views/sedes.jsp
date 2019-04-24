@@ -1,3 +1,4 @@
+<%@include file="jspf/cabecalho.jspf" %>
 <%@page pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
@@ -53,8 +54,5 @@
     <!--<p>Olá ${sede.nome}, de ${sede.cidade} - ${sede.estado}</p>-->
     <div>
         <a href="cadastro-sedes.html">Cadastrar nova sede</a>
-    </div>
-    <div>
-        <a href="index.html">Página Inicial</a>
     </div>
 </body>
