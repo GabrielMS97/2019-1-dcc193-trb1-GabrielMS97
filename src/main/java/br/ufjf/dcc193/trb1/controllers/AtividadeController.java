@@ -51,4 +51,12 @@ public class AtividadeController {
         return mv;
     }
 
+    @RequestMapping("editar-atividades.html")
+    public ModelAndView editarAtividade(Atividade a) {
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("atividade", repAtividade.getOne(a.getId()));
+        mv.setViewName("editar-atividades");
+        return mv;
+    }
+
 }

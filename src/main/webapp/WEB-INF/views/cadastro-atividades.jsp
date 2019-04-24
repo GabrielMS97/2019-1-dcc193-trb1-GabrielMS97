@@ -2,7 +2,7 @@
 
 <h1>Cadastro de Atividade</h1>
 <form action="result-cadastroAtividades.html" method="post">
-    <label>Nome</label>
+    <label>Título</label>
     <input required type="text" name="titulo" placeholder="Digite o título"><br/>
     <label>Descrição</label>
     <input required type="text" name="descricao" placeholder="Descreva a atividade"><br/>
