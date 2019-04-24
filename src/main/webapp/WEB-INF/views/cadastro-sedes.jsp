@@ -17,3 +17,4 @@
     <button type="submit">Cadastrar</button>
     <button type="reset">Apagar</button>
 </form>
+<a href="sedes.html">Voltar</a>
