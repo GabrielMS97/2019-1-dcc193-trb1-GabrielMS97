@@ -1,16 +1,23 @@
 package br.ufjf.dcc193.trb1.models;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Atividade {
 	@Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
-	
+
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "sedeId", nullable = false)
+    private Sede sede;
+
     private String titulo;
     private String descricao;
     private String inicio;
@@ -22,7 +29,7 @@ public class Atividade {
 
     public Atividade(){}
 
-    public Atividade(String titulo, String descricao, String inicio, String fim, int horasAssistencial, int horasJuridica, int horasFinanceira, int horasExecutiva){
+    public Atividade(String titulo, String descricao, Sede sede, String inicio, String fim, int horasAssistencial, int horasJuridica, int horasFinanceira, int horasExecutiva){
         this.titulo = titulo;
         this.descricao = descricao;
         this.inicio = inicio;
@@ -30,8 +37,17 @@ public class Atividade {
         this.horasAssistencial = horasAssistencial;
         this.horasExecutiva = horasExecutiva;
         this.horasFinanceira = horasFinanceira;
-        this.horasJuridica = horasJuridica;
-    }
+		this.horasJuridica = horasJuridica;
+		this.sede = sede;
+	}
+	
+	public Sede getSede() {
+		return this.sede;
+	}
+
+	public void setSede(Sede sede) {
+		this.sede = sede;
+	}
 
 	public Long getId() {
 		return this.id;

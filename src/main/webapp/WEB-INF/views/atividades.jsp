@@ -17,6 +17,7 @@
         <tr>
             <th>Título</th>
             <th>Descrição</th>
+            <th>Sede</th>
             <th>Data de Início</th>
             <th>Data de Fim</th>
             <th>Horas Assistenciais</th>
@@ -30,6 +31,7 @@
             <tr>
                 <td>${atividade.titulo}</td>
                 <td>${atividade.descricao}</td>
+                <td>${atividade.sede.nome}</td>
                 <td>${atividade.inicio}</td>
                 <td>${atividade.fim}</td>
                 <td>${atividade.horasAssistencial}</td>

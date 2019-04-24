@@ -30,8 +30,10 @@ public class MainApplication {
 		repMembros.save(m2);
 
 		AtividadeRepository repAtividades = ctx.getBean(AtividadeRepository.class);
-		repAtividades.save(new Atividade("Atividade 1", "DescriçãoDescriçãoDescrição", "21-12-2019", "23-04-2020", 4,4,4,4));
-		repAtividades.save(new Atividade("Atividade 2", "DescriçãoDescriçãoDescrição", "01-02-2003", "04-05-2006", 7,8,9,10));
+		Atividade a1 = new Atividade("Atividade 1", "DescriçãoDescriçãoDescrição", s1, "21-12-2019", "23-04-2020", 4,4,4,4);
+		Atividade a2 = new Atividade("Atividade 2", "DescriçãoDescriçãoDescrição", s2, "01-02-2003", "04-05-2006", 7,8,9,10);
+		repAtividades.save(a1);
+		repAtividades.save(a2);
 	}
 
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.ufjf.dcc193.trb1.models.Atividade;
+import br.ufjf.dcc193.trb1.models.Sede;
 import br.ufjf.dcc193.trb1.repositories.AtividadeRepository;
 import br.ufjf.dcc193.trb1.repositories.SedeRepository;
 
@@ -28,8 +29,12 @@ public class AtividadeController {
     }
 
     @RequestMapping("cadastro-atividades.html")
-    public String formularioCadAtividades() {
-        return "cadastro-atividades";
+    public ModelAndView formularioCadAtividades() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("cadastro-atividades");
+        List<Sede> sedes = repSede.findAll();
+        mv.addObject("sedes", sedes);
+        return mv;
     }
 
     @RequestMapping("result-cadastroAtividades.html")
