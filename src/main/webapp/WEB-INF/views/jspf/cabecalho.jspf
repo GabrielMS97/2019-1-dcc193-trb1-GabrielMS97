@@ -18,7 +18,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="membros.html">Membros</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="atividades.html">Atividades</a>
+            <li class="nav-item">
+                <a class="nav-link" href="atividades.html">Atividades</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="horas.html">Horas de Atividades por sede</a>
             </li>
         </ul>
     </div>

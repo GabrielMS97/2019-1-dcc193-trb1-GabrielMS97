@@ -51,3 +51,4 @@
         <a href="cadastro-membros.html">Cadastrar membro</a>
     </div>
 </body>
+<%@include file="jspf/rodape.jspf" %>

@@ -7,13 +7,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import br.ufjf.dcc193.trb1.models.Atividade;
+import br.ufjf.dcc193.trb1.models.Membro;
 import br.ufjf.dcc193.trb1.models.Sede;
+import br.ufjf.dcc193.trb1.repositories.AtividadeRepository;
+import br.ufjf.dcc193.trb1.repositories.MembroRepository;
 import br.ufjf.dcc193.trb1.repositories.SedeRepository;
 
 @Controller
 public class SedeController {
     @Autowired
     SedeRepository repSede;
+    @Autowired
+    MembroRepository repMembro;
+    @Autowired
+    AtividadeRepository repAtividade;
 
     @RequestMapping("sedes.html")
     public ModelAndView home() {
@@ -41,8 +49,19 @@ public class SedeController {
 
     @RequestMapping("excluir-sedes.html")
     public ModelAndView excluirSedes(Sede s) {
-        // Sede sede = repSede.getOne(s.getId());
         ModelAndView mv = new ModelAndView();
+        List<Membro> membros = repMembro.findAll();
+        List<Atividade> atividades = repAtividade.findAll();
+        for (Membro membro : membros) {
+            if(membro.getSede() == s){
+                repMembro.deleteById(membro.getId());
+            }
+        }
+        for (Atividade atividade : atividades) {
+            if(atividade.getSede() == s){
+                repAtividade.deleteById(atividade.getId());
+            }
+        }
         repSede.deleteById(s.getId());
         mv.addObject("sedes", repSede.findAll());
         mv.setViewName("sedes");

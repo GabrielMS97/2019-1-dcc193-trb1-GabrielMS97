@@ -29,3 +29,4 @@
     <button type="submit">Salvar</button>
 </form>
 <a href="membros.jsp">Voltar</a>
+<%@include file="jspf/rodape.jspf" %>

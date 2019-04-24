@@ -56,3 +56,4 @@
         <a href="cadastro-sedes.html">Cadastrar nova sede</a>
     </div>
 </body>
+<%@include file="jspf/rodape.jspf" %>

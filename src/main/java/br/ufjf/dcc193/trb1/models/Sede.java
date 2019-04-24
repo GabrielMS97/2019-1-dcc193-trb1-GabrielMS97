@@ -17,10 +17,10 @@ public class Sede{
     private String bairro;
     private String telefone;
 	private String enderecoWeb;
-	private int totalHorasA;
-	private int totalHorasJ;
-	private int totalHorasE;
-	private int totalHorasF;
+	private int totalHorasA = 0;
+	private int totalHorasJ = 0;
+	private int totalHorasE = 0;
+	private int totalHorasF = 0;
 
     public Sede(){
         

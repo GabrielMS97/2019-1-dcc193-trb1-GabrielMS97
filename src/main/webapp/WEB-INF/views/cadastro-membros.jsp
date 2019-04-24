@@ -25,3 +25,4 @@
     <button type="reset">Apagar</button>
 </form>
 <a href="membros.html">Voltar</a>
+<%@include file="jspf/rodape.jspf" %>

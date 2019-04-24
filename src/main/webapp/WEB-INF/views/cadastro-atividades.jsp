@@ -31,3 +31,4 @@
     <button type="reset">Apagar</button>
 </form>
 <a href="atividades.html">Voltar</a>
+<%@include file="jspf/rodape.jspf" %>

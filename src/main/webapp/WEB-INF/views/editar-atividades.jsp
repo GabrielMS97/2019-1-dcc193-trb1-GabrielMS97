@@ -35,3 +35,4 @@
     <button type="submit">Salvar</button>
 </form>
 <a href="atividades.html">Voltar</a>
+<%@include file="jspf/rodape.jspf" %>

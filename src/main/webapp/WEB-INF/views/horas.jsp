@@ -6,11 +6,11 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Sedes</title>
+    <title>Total de horas</title>
 </head>
 
 <body>
-    <h1> Sedes </h1>
+    <h1> Total de horas </h1>
     <br />
 
     <table border="3px">
@@ -31,4 +31,7 @@
                 <td>${sede.totalHorasF}</td>
             </tr>
         </c:forEach>
+    </table>
 </body>
+
+<%@include file="jspf/rodape.jspf" %>

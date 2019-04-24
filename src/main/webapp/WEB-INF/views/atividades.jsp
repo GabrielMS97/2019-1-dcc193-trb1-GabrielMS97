@@ -57,3 +57,4 @@
         <a href="cadastro-atividades.html">Cadastrar atividade</a>
     </div>
 </body>
+<%@include file="jspf/rodape.jspf" %>
