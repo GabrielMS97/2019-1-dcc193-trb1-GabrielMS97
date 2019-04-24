@@ -29,7 +29,7 @@
                 <td>${membro.nome}</td>
                 <td>${membro.funcao}</td>
                 <td>${membro.email}</td>
-                <td></td>
+                <td>${membro.sede.nome}</td>
                 <td>${membro.entrada}</td>
                 <td>${membro.saida}</td>
                 <td>

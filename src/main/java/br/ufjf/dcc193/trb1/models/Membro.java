@@ -1,15 +1,22 @@
 package br.ufjf.dcc193.trb1.models;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Membro {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "sedeId", nullable = false)
+    private Sede sede;
 
     private String nome;
     private String funcao;
@@ -19,13 +26,22 @@ public class Membro {
 
     public Membro(){}
 
-    public Membro(String nome, String funcao, String email, String entrada, String saida){
+    public Membro(String nome, String funcao, String email, String entrada, String saida, Sede sede){
         this.nome = nome;
         this.funcao = funcao;
         this.email = email;
         this.entrada = entrada;
         this.saida = saida;
+        this.sede = sede;
     }
+
+    public Sede getSede() {
+		return this.sede;
+	}
+
+	public void setSede(Sede sede) {
+		this.sede = sede;
+	}
 
     public String getEntrada() {
         return this.entrada;

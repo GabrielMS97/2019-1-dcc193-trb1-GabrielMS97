@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.ufjf.dcc193.trb1.models.Membro;
+import br.ufjf.dcc193.trb1.models.Sede;
 import br.ufjf.dcc193.trb1.repositories.MembroRepository;
 import br.ufjf.dcc193.trb1.repositories.SedeRepository;
 
@@ -28,8 +29,12 @@ public class MembroController {
     }
 
     @RequestMapping("cadastro-membros.html")
-    public String cadMembros() {
-        return "cadastro-membros";
+    public ModelAndView cadMembros() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("cadastro-membros");
+        List<Sede> sedes = repSede.findAll();
+        mv.addObject("sedes", sedes);
+        return mv;
     }
 
     @RequestMapping("result-cadastroMembros.html")
