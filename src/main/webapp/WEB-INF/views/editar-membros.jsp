@@ -1,5 +1,6 @@
 <%@include file="jspf/cabecalho.jspf" %>
 <%@page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <h1>Edição de Membro</h1>
 <form action="result-cadastroMembros.html" method="POST">
@@ -14,6 +15,17 @@
     <input type="text" name="entrada" value="${membro.entrada}"><br />
     <label>Data de Saída</label>
     <input type="text" name="saida" value="${membro.saida}"><br />
+    <label>Sede</label>
+    <select name="sede" required>
+        <c:forEach var="sede" items="${sedes}">
+            <c:if test="${sede.nome eq membro.sede.nome}">
+                <option selected value="${sede.id}">${sede.nome}</option>
+            </c:if>
+            <c:if test="${sede.nome ne membro.sede.nome}">
+                <option value="${sede.id}">${sede.nome}</option>
+            </c:if>
+        </c:forEach>
+    </select><br/>
     <button type="submit">Salvar</button>
 </form>
 <a href="membros.jsp">Voltar</a>
