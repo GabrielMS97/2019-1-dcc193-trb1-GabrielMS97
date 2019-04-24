@@ -1,4 +1,5 @@
 <%@page pageEncoding="utf-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 
@@ -12,7 +13,7 @@
     <br />
 
     <table border="3px">
-        <thead>
+        <tr>
             <th>Nome</th>
             <th>Função</th>
             <th>E-mail</th>
@@ -21,10 +22,29 @@
             <th>Data de Saída</th>
             <th>Editar</th>
             <th>Excluir</th>
-        </thead>
-        <tbody>
-
-        </tbody>
+        </td>
+        <c:forEach var="membro" items="${membros}">
+            <tr>
+                <td>${membro.nome}</td>
+                <td>${membro.funcao}</td>
+                <td>${membro.email}</td>
+                <td></td>
+                <td>${membro.entrada}</td>
+                <td>${membro.saida}</td>
+                <td>
+                    <form method="POST" action="editar-membros.html">
+                        <input type="hidden" name="id" value="${membro.id}">
+                        <button type="submit">Editar</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="excluir-membros.html">
+                        <input type="hidden" name="id" value="${membro.id}">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+        </c:forEach>
     </table>
     <div>
         <a href="cadastro-membros.html">Cadastrar membro</a>
